@@ -1,6 +1,13 @@
 {
-  "name": "example-ng6-lib-app",
-  "version": "0.0.0",
+  "name": "example-ng6-lib",
+  "version": "0.1.0",
+  "description": "Angular 6 Library example",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t-palmer/example-ng6-lib.git"
+  },
+  "author": "Todd Palmer",
+  "license": "ISC",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
