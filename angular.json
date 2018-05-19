@@ -116,6 +116,46 @@
           }
         }
       }
+    },
+    "example-ng6-lib": {
+      "root": "projects/example-ng6-lib",
+      "sourceRoot": "projects/example-ng6-lib/src",
+      "projectType": "library",
+      "prefix": "enl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/example-ng6-lib/tsconfig.lib.json",
+            "project": "projects/example-ng6-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/example-ng6-lib/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/example-ng6-lib/src/test.ts",
+            "tsConfig": "projects/example-ng6-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/example-ng6-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/example-ng6-lib/tsconfig.lib.json",
+              "projects/example-ng6-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "example-ng6-lib-app"
