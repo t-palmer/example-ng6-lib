@@ -14,7 +14,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build_lib": "ng build --prod example-ng6-lib",
+    "npm_pack": "cd dist/example-ng6-lib && npm pack",
+    "package": "npm run build_lib && npm run npm_pack"
   },
   "private": true,
   "dependencies": {
